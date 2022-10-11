@@ -88,6 +88,53 @@ if (numero1 < numero2 && numero1 < numero3) {
 
 // 10- Crear un programa que permita el ingreso de “PIEDRA”, “PAPEL” o “TIJERAS” a 2 jugadores y muestre en pantalla cual de los 2 ha ganado o si han empatado. En caso de algún ingreso incorrecto mostrar por pantalla que uno de los jugadores ha hecho trampa.
 
+let jugador1 = prompt('Jugador 1 :Elija PIEDRA, PAPEL O TIJERA')
+let jugador2 = prompt('Jugador 2 :Elija PIEDRA, PAPEL O TIJERA')
+if(jugador1 === 'PIEDRA'){
+    if(jugador2 === 'PAPEL'){
+        alert(`El ganador es jugador2 con ${jugador2}`)
+    }
+    else if(jugador2 === 'TIJERA'){
+        alert(`El ganador es jugador1 con ${jugador1}`)
+    }
+    else if(jugador2 === 'PIEDRA'){
+        alert('Los Jugadores Empataron')
+    }
+    else{
+        alert('uno de los jugadores ha hecho trampa')
+    }
+}
+else if(jugador1 === 'TIJERA'){
+    if(jugador2 === 'PAPEL'){
+        alert(`El ganador es jugador1 con ${jugador1}`)
+    }
+    else if(jugador2 === 'PIEDRA'){
+        alert(`El ganador es jugador2 con ${jugador2}`)
+    }
+    else if(jugador2 === 'TIJERA'){
+        alert('Los Jugadores Empataron')
+    }
+    else{
+        alert('uno de los jugadores ha hecho trampa')
+    }
+}
+else if(jugador1 === 'PAPEL'){
+    if(jugador2 === 'TIJERA'){
+        alert(`El ganador es jugador2 con ${jugador2}`)
+    }
+    else if(jugador2 === 'PIEDRA'){
+        alert(`El ganador es jugador1 con ${jugador1}`)
+    }
+    else if(jugador2 === 'PAPEL'){
+        alert('Los Jugadores Empataron')
+    }
+    else{
+        alert('uno de los jugadores ha hecho trampa')
+    }
+}
+else{
+    alert('uno de los jugadores ha hecho trampa')
+}
 
 // 11- Realizar un programa que permita el ingreso de un color y utilizando “switch” mostrar por pantalla los siguientes mensajes según las opciones: Blanco o Negro: Falta de color, Verde: El color de la naturaleza, Azul: El color del agua, Amarillo: El color del sol, Rojo: El color del fuego, Marrón: el color de la tierra, y para cualquier otro valor: Excelente elección, no lo teníamos pensado.
 
