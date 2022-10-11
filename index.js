@@ -46,6 +46,17 @@ if (numero1 === numero2){
 
 // 3- Realizar un programa que dado 2 números imprima por consola cual de los 2 numeros es el mas grande o si son iguales.
 
+let num = 5
+let num1 = 7
+if (num > num1) {
+    console.log (`${num} es mas grande que ${num1}`);
+}
+else if (num1 > num){
+    console.log (`${num1} es mas grande que ${num}`);
+}
+else {
+    console.log(`${num1} es igual que ${num}`);
+}
 
 // 4- Realizar un programa que dado 3 números imprima por pantalla cual de los 3 es el mas chico.
 
