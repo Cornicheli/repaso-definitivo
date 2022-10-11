@@ -34,6 +34,15 @@ if(confirmar === 'si'){
 
 // 2- Realizar un programa que dado 2 números imprima por consola si los numeros son iguales o si son diferentes.
 
+let numero1 = 10;
+let numero2 = 20;
+
+if (numero1 === numero2){
+    console.log(`${numero1} es igual a ${numero2}`);
+}else{
+    console.log(`${numero1} es diferente a ${numero2}`);
+}
+
 
 // 3- Realizar un programa que dado 2 números imprima por consola cual de los 2 numeros es el mas grande o si son iguales.
 
