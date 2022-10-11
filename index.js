@@ -3,7 +3,7 @@
 // 1- Crear un programa que permita ingresar todos los datos de tu documento nacional de identidad, mostrar por pantalla un mensaje que imprima todos los datos ingresados y pregunte si están correctos los mismos. En caso afirmativo, crear un objeto llamado dni con todos los datos ingresados y mostrarlos por consola con console.table() mas un mensaje de registro exitoso, en caso de que la persona rechace confirmar los datos, mostrar un mensaje que diga: vuelva a intentarlo en 1 mes.
 
 //Metodo Gabi
-let documento = Number(prompt('Ingresa Tu Numero de Documento'))
+/* let documento = Number(prompt('Ingresa Tu Numero de Documento'))
 let nombre = (prompt('Nombre y apellido'))
 let domicilio =(prompt('Ingrese su Domiciolio'))
 alert(documento + ' ' + nombre + ' ' + domicilio )
@@ -19,7 +19,7 @@ if(confirmar === 'si'){
     alert('registro exitoso')
 }else{
     alert('vuelva a intentarlo en un mes mas tarde')
-}
+} */
 
 
 //Metodo Pili
@@ -34,19 +34,19 @@ if(confirmar === 'si'){
 
 // 2- Realizar un programa que dado 2 números imprima por consola si los numeros son iguales o si son diferentes.
 
-let numero1 = 10;
+/* let numero1 = 10;
 let numero2 = 20;
 
 if (numero1 === numero2){
     console.log(`${numero1} es igual a ${numero2}`);
 }else{
     console.log(`${numero1} es diferente a ${numero2}`);
-}
+} */
 
 
 // 3- Realizar un programa que dado 2 números imprima por consola cual de los 2 numeros es el mas grande o si son iguales.
 
-let num = 5
+/* let num = 5
 let num1 = 7
 if (num > num1) {
     console.log (`${num} es mas grande que ${num1}`);
@@ -57,9 +57,20 @@ else if (num1 > num){
 else {
     console.log(`${num1} es igual que ${num}`);
 }
-
+ */
 // 4- Realizar un programa que dado 3 números imprima por pantalla cual de los 3 es el mas chico.
 
+let numero1 = 1
+let numero2 = 2
+let numero3 = 3
+
+if (numero1 < numero2 && numero1 < numero3) {
+    alert(`${numero1} es mas chico que ${numero2} y ${numero3}`)
+}else if(numero2 < numero3 && numero2 < numero1){
+    alert(`${numero2} es mas chico que ${numero3} y ${numero1}`)
+}else{
+    alert(`${numero3} es mas chico que ${numero2} y ${numero1}`)
+}
 
 // 5- Realizar un programa que dado 2 objetos representando personas con las propiedades nombre, edad y altura imprima por pantalla cual de las 2 personas es la mas alta y cual es la de mayor edad.
 
