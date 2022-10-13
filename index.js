@@ -66,9 +66,9 @@ let numero3 = 3
 
 if (numero1 < numero2 && numero1 < numero3) {
     alert(`${numero1} es mas chico que ${numero2} y ${numero3}`)
-}else if(numero2 < numero3 && numero2 < numero1){
+} else if (numero2 < numero3 && numero2 < numero1) {
     alert(`${numero2} es mas chico que ${numero3} y ${numero1}`)
-}else{
+} else {
     alert(`${numero3} es mas chico que ${numero2} y ${numero1}`)
 }
 
@@ -90,49 +90,49 @@ if (numero1 < numero2 && numero1 < numero3) {
 
 let jugador1 = prompt('Jugador 1 :Elija PIEDRA, PAPEL O TIJERA')
 let jugador2 = prompt('Jugador 2 :Elija PIEDRA, PAPEL O TIJERA')
-if(jugador1 === 'PIEDRA'){
-    if(jugador2 === 'PAPEL'){
+if (jugador1 === 'PIEDRA') {
+    if (jugador2 === 'PAPEL') {
         alert(`El ganador es jugador2 con ${jugador2}`)
     }
-    else if(jugador2 === 'TIJERA'){
+    else if (jugador2 === 'TIJERA') {
         alert(`El ganador es jugador1 con ${jugador1}`)
     }
-    else if(jugador2 === 'PIEDRA'){
+    else if (jugador2 === 'PIEDRA') {
         alert('Los Jugadores Empataron')
     }
-    else{
+    else {
         alert('uno de los jugadores ha hecho trampa')
     }
 }
-else if(jugador1 === 'TIJERA'){
-    if(jugador2 === 'PAPEL'){
+else if (jugador1 === 'TIJERA') {
+    if (jugador2 === 'PAPEL') {
         alert(`El ganador es jugador1 con ${jugador1}`)
     }
-    else if(jugador2 === 'PIEDRA'){
+    else if (jugador2 === 'PIEDRA') {
         alert(`El ganador es jugador2 con ${jugador2}`)
     }
-    else if(jugador2 === 'TIJERA'){
+    else if (jugador2 === 'TIJERA') {
         alert('Los Jugadores Empataron')
     }
-    else{
+    else {
         alert('uno de los jugadores ha hecho trampa')
     }
 }
-else if(jugador1 === 'PAPEL'){
-    if(jugador2 === 'TIJERA'){
+else if (jugador1 === 'PAPEL') {
+    if (jugador2 === 'TIJERA') {
         alert(`El ganador es jugador2 con ${jugador2}`)
     }
-    else if(jugador2 === 'PIEDRA'){
+    else if (jugador2 === 'PIEDRA') {
         alert(`El ganador es jugador1 con ${jugador1}`)
     }
-    else if(jugador2 === 'PAPEL'){
+    else if (jugador2 === 'PAPEL') {
         alert('Los Jugadores Empataron')
     }
-    else{
+    else {
         alert('uno de los jugadores ha hecho trampa')
     }
 }
-else{
+else {
     alert('uno de los jugadores ha hecho trampa')
 }
 
@@ -141,15 +141,53 @@ else{
 
 // 12- Realizar un programa que permita el ingreso de 2 valores numéricos y una operación. Según sea la operación ingresada (suma, resta, multiplicación, división) el programa deberá mostrar en pantalla un mensaje junto con el resultado. En caso de haber elegido división realizar la operación siempre que sea posible o mostrar un mensaje de ERROR si el divisor ingresado fue 0.
 
-//                                  <-----------------------------BULCES-----------------------------> (WHILE - DO WHILE - FOR)
+//                     <-----------------------------BUCLES-----------------------------> (WHILE - DO WHILE - FOR)
 
 // 13- Realizar un programa que permita el ingreso de un numero y muestre su tabla de multiplicar (Los primeros 10 multiplos).
 
+let numero = Number(prompt("Ingresa un número y conoce su tabla de multiplicar:"));
 
-// 14- Realizar un programa que permita el ingreso de numeros los cuales se tienen que ir acumulando. El ingreso de datos terminara cuando el usuario ingrese un valor 0.
+for (let i = 1; i <= 10; i++) {
+    let resultado = (`${numero} x ${i} = ${numero * i}`);
+    console.log(resultado)
+}
 
+
+// 14- Realizar un programa que permita el ingreso de numeros los cuales se tienen que ir acumulando. El ingreso de datos terminara cuando el usuario ingrese un valor 0.;
+
+let numeros = 0
+let pregunta
+
+do {
+    pregunta = Number(prompt("Ingresa un número:"))
+    numeros += pregunta
+    console.log(numeros)
+}
+while (pregunta !== 0) {
+}
 
 // 15- Realizar en juego de adivinar el numero del los ejercicios del tema anterior, en una variable guardar un numero que este en el rango 1 - 100. La persona debera poder ingresar numeros hasta adivinar el valor que se encuentre en dicha variable. Si el valor es menor al numero secreto, avisarle al usuario lo sucedido y pedirle nuevamente el ingreso de otro numero, realizar la misma accion pero en lugar de cuando es menor, si es que el numero ingresado es mayor. Asi sucesivamente hasta que el usuario adivine el numero secreto. Por ultimo mostrar un mensaje de felicitaciones y decirle en cuantos intentos lo ha realizado.
+
+let numerosIntentos = 0
+let numeroSecreto = 39;
+let ingreseNumero
+
+do {
+    if (numerosIntentos > 0) {
+        if (ingreseNumero < numeroSecreto) {
+            ingreseNumero = Number(prompt("El número ingresado es menor. Vuelve a intentarlo"))
+        } else if (ingreseNumero > numeroSecreto) {
+            ingreseNumero = Number(prompt("El número ingresado es mayor. Vuelve a intentarlo"))
+        }
+    } else {
+        ingreseNumero = Number(prompt("Adivina el número secreto"))
+    }
+    numerosIntentos++
+    console.log(`Vas en el intento no. ${numerosIntentos}`)
+}
+while (ingreseNumero !== numeroSecreto) {
+}
+alert(`Adivinaste el número secreto. Lo adivinaste en ${numerosIntentos} intentos`)
 
 
 // 16- Realizar un programa que permita decir si un numero es primo. Un numero es primo si solo es divisible por el valor 1 y por si mismo. Ayuda: Usar la operacion de modulo.Los numeros solo poseen divisores hasta la mitad del valor del mismo. Ej: 50 tiene como divisores 1, 2, 5, 10 y 25. No es primo. Contener mas de 2 divisores el numero ya no es primo.
@@ -160,12 +198,64 @@ else{
 
 // 18-. Dado un array de 10 elementos, realizar un programa que recorra ese array y muestre un mensaje por consola con cada uno de los elementos del array.
 
+let planetas = ["Mercurio", "Venus", "Tierra", "Marte", "Jupiter", "Saturno", "Urano", "Neptuno", "Pluton"]
+let frase = "es un planeta "
+
+for (i of planetas) {
+    console.log(`${i} ${frase}`)
+}
 
 // 19- Dado un array de 10 numeros, realizar un programa que muestre por consola el doble de cada uno de los elementos.
 
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+for (i of numeros) {
+    let resultado = `El doble de ${i} es ${i * 2}`
+    console.log(resultado)
+}
 // 20- Dado un array con al menos 5 objetos comprendidos por un grupo familiar, cada objeto representa a 1 persona con al menos 4 propiedades, realizar un programa que muestre un mensaje de presentacion por cada elemento del array.
 
+let familia = [
+
+{
+        nombre: "Claudia",
+        apellido: "Luque",
+        hobbie: "la jardinería",
+        deporte: "trotar",
+    },
+
+{
+    nombre: "Guillermo",
+    apellido: "Camacho",
+    hobbie: "hacer mercado",
+    deporte: "hacer gimnasio",
+},
+
+{
+    nombre: "Lina",
+    apellido: "Camacho",
+    hobbie: "darle picos a Nico",
+    deporte: "nada",
+},
+
+{
+    nombre: "Juanes",
+    apellido: "Camacho",
+    hobbie: "la jardinería",
+    deporte: "practicar boxeo",
+},
+
+{
+    nombre: "Sark",
+    apellido: "Camacho",
+    hobbie: "coger palitos",
+    deporte: "trotar en el parque",
+},
+]
+
+for (familiar of familia) {
+    console.log(`A ${familiar.nombre} ${familiar.apellido} le gusta ${familiar.hobbie} y ${familiar.deporte} `)
+}
 
 // 21- Dado un array de 10 numeros, realizar un programa que recorra el array y solo muestre los numeros impares.
 
